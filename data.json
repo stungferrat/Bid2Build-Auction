@@ -20,8 +20,14 @@
     },
     "Tech4Humanity": {
       "password": "T4H7Lm2Z",
-      "credits": 1000,
-      "items": [],
+      "credits": 850,
+      "items": [
+        {
+          "name": "ad8232",
+          "price": 150,
+          "qty": 1
+        }
+      ],
       "registered": true
     },
     "Heisenberg": {
@@ -104,6 +110,7 @@
     }
   },
   "log": [
-    "2025-10-14T22:09:32 \u2014 Innovate_Elevate won 1 \u00d7 Raspberry Pi @ 450 (spent 450)"
+    "2025-10-14T22:09:32 \u2014 Innovate_Elevate won 1 \u00d7 Raspberry Pi @ 450 (spent 450)",
+    "2025-10-15T00:07:00 \u2014 Tech4Humanity won 1 \u00d7 ad8232 @ 150 (spent 150)"
   ]
 }

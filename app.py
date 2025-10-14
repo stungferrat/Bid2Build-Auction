@@ -25,11 +25,10 @@ if "user" not in st.session_state:
 if "role" not in st.session_state:
     st.session_state.role = None
 
-# Restore login from query params
-query_params = st.experimental_get_query_params()
-if not st.session_state.user and "user" in query_params and "role" in query_params:
-    st.session_state.user = query_params["user"][0]
-    st.session_state.role = query_params["role"][0]
+# Restore login from URL query params
+if not st.session_state.user and "user" in st.query_params and "role" in st.query_params:
+    st.session_state.user = st.query_params["user"]
+    st.session_state.role = st.query_params["role"]
 
 # ---------------- Login ----------------
 def login_ui():
@@ -45,7 +44,7 @@ def login_ui():
             if a_user == data["admin"]["username"] and a_pw == data["admin"]["password"]:
                 st.session_state.user = a_user
                 st.session_state.role = "admin"
-                st.experimental_set_query_params(user=a_user, role="admin")
+                st.query_params.update({"user": a_user, "role": "admin"})
                 st.rerun()
             else:
                 st.error("Invalid admin credentials.")
@@ -59,7 +58,7 @@ def login_ui():
             if t_user in teams and t_pw == teams[t_user]["password"]:
                 st.session_state.user = t_user
                 st.session_state.role = "team"
-                st.experimental_set_query_params(user=t_user, role="team")
+                st.query_params.update({"user": t_user, "role": "team"})
                 st.rerun()
             else:
                 st.error("Invalid team login (check username & password).")
@@ -68,7 +67,7 @@ def login_ui():
 def logout_ui():
     if st.button("Logout 🔒", key="logout_btn"):
         st.session_state.clear()
-        st.experimental_set_query_params()  # Clear stored params
+        st.query_params.clear()
         st.rerun()
 
 # ---------------- Admin UI ----------------
@@ -197,20 +196,18 @@ def admin_ui():
     for line in data["log"][-20:]:
         st.code(line)
 
+
+# ---------------- Team UI ----------------
 # ---------------- Team UI ----------------
 def team_ui():
     name = st.session_state.user
+
+    # Reload data fresh from disk on every refresh
+    data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     info = data["teams"][name]
 
     st.title(f"Team Console — {name}")
     logout_ui()
-
-    # Optional auto-refresh every 10s (to update credits/items)
-    st_autorefresh = st.empty()
-    st_autorefresh.info("Auto-refreshing every 10 seconds for live updates...")
-    st_autorefresh.empty()
-    time.sleep(10)
-    st.rerun()
 
     st.metric("Credits Remaining", info["credits"])
     st.write("Items Won:")
@@ -220,6 +217,12 @@ def team_ui():
     else:
         st.caption("No items yet. Keep bidding in the room!")
     st.info("Bidding is conducted live by the host. This page is your private ledger.")
+
+    # Optional auto-refresh every 10s
+    st.caption("Auto-refreshing every 10 seconds for live updates...")
+    time.sleep(10)
+    st.rerun()
+
 
 # ---------------- Router ----------------
 if st.session_state.user is None:
