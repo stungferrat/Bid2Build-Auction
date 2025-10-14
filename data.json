@@ -1,0 +1,109 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "admin123"
+  },
+  "bid_step": 50,
+  "starting_credits": 1000,
+  "teams": {
+    "Innovate_Elevate": {
+      "password": "IE82X9Qf",
+      "credits": 550,
+      "items": [
+        {
+          "name": "Raspberry Pi",
+          "price": 450,
+          "qty": 1
+        }
+      ],
+      "registered": true
+    },
+    "Tech4Humanity": {
+      "password": "T4H7Lm2Z",
+      "credits": 1000,
+      "items": [],
+      "registered": true
+    },
+    "Heisenberg": {
+      "password": "HB93nPa1",
+      "credits": 1000,
+      "items": [],
+      "registered": true
+    },
+    "Innovators": {
+      "password": "IN55kVw8",
+      "credits": 1000,
+      "items": [],
+      "registered": true
+    },
+    "SAS": {
+      "password": "SAS2tYc7",
+      "credits": 1000,
+      "items": [],
+      "registered": true
+    },
+    "Abhiyantri": {
+      "password": "AB78qLs4",
+      "credits": 1000,
+      "items": [],
+      "registered": true
+    },
+    "Jarvis": {
+      "password": "JR61mBc5",
+      "credits": 1000,
+      "items": [],
+      "registered": true
+    },
+    "IdeaSphere": {
+      "password": "IS84rNd3",
+      "credits": 1000,
+      "items": [],
+      "registered": true
+    },
+    "TeamCircuits": {
+      "password": "TC47zHp6",
+      "credits": 1000,
+      "items": [],
+      "registered": true
+    },
+    "WashiOWashi": {
+      "password": "WOW3gRt9",
+      "credits": 1000,
+      "items": [],
+      "registered": true
+    },
+    "Unregistered_A": {
+      "password": "URa5Jk82",
+      "credits": 1000,
+      "items": [],
+      "registered": false
+    },
+    "Unregistered_B": {
+      "password": "oq0cRW6G",
+      "credits": 1000,
+      "items": [],
+      "registered": false
+    },
+    "Unregistered_C": {
+      "password": "URc6Qw54",
+      "credits": 1000,
+      "items": [],
+      "registered": false
+    },
+    "Unregistered_D": {
+      "password": "URd2Mv77",
+      "credits": 1000,
+      "items": [],
+      "registered": false
+    },
+    "Unregistered_E": {
+      "password": "URe8Hx20",
+      "credits": 1000,
+      "items": [],
+      "registered": false
+    }
+  },
+  "log": [
+    "2025-10-14T22:09:32 \u2014 Innovate_Elevate won 1 \u00d7 Raspberry Pi @ 450 (spent 450)"
+  ]
+}
