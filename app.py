@@ -114,8 +114,9 @@ def admin_ui():
             with c2:
                 if st.button(f"Reset Credits → {data['starting_credits']} [{name}]"):
                     info["credits"] = data["starting_credits"]
+                    info["items"] = []  
                     save_data(data)
-                    st.success("Credits reset.")
+                    st.success(f"Credits and items cleared for {name}.")
             with c3:
                 reg = st.checkbox("Registered", value=info.get("registered", True), key=f"reg_{name}")
                 if reg != info.get("registered", True):
@@ -131,10 +132,26 @@ def admin_ui():
 
             st.write("Items Won:")
             if info["items"]:
-                for it in info["items"]:
-                    st.write(f"- {it['qty']} × {it['name']} @ {it['price']} credits")
+                for idx, it in enumerate(info["items"]):
+                    item_text = f"- {it['qty']} × {it['name']} @ {it['price']} credits"
+                    col_i, col_r = st.columns([5, 1])
+                    with col_i:
+                        st.write(item_text)
+                    with col_r:
+                        if st.button(f"❌ Remove [{name}]_{idx}", key=f"rm_{name}_{idx}"):
+                # Calculate refund
+                            refund = it["price"] * it.get("qty", 1)
+                # Restore credits
+                            info["credits"] += refund
+                # Remove item
+                            del info["items"][idx]
+                # Save and notify
+                            save_data(data)
+                            st.warning(f"Removed {it['name']} from {name}. {refund} credits refunded.")
+                            st.rerun()
             else:
                 st.caption("No items yet.")
+
 
     st.divider()
 
@@ -196,8 +213,6 @@ def admin_ui():
     for line in data["log"][-20:]:
         st.code(line)
 
-
-# ---------------- Team UI ----------------
 # ---------------- Team UI ----------------
 def team_ui():
     name = st.session_state.user
