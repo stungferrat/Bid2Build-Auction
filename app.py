@@ -32,36 +32,63 @@ if not st.session_state.user and "user" in st.query_params and "role" in st.quer
 
 # ---------------- Login ----------------
 def login_ui():
-    st.title("Bid2Build — Auction Console")
-    st.caption("Admin records the winning bids; teams see their own credits and items only.")
-    col1, col2 = st.columns(2)
+    # ---- HEADER ----
+    st.markdown(
+        """
+        <div style='text-align: center; padding-top: 10px;'>
+            <h1 style='font-size: 3em; font-weight: 700; margin-bottom: 0;'>Bid2Build</h1>
+            <p style='font-size: 1.1em; color: gray; margin-top: 5px;'>Tech Auction | Build Your Product</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-    with col1:
-        st.subheader("Admin Login")
-        a_user = st.text_input("Username", key="a_user")
-        a_pw = st.text_input("Password", type="password", key="a_pw")
-        if st.button("Login as Admin"):
+    st.divider()
+
+    # ---- TEAM LOGIN (Main Section) ----
+    st.markdown("### 👥 Team Login")
+    t_user = st.text_input("Team Username (exactly as assigned)", key="t_user_login")
+    t_pw = st.text_input("Team Password", type="password", key="t_pw_login")
+
+    if st.button("Login as Team"):
+        teams = data["teams"]
+        if t_user in teams and t_pw == teams[t_user]["password"]:
+            st.session_state.user = t_user
+            st.session_state.role = "team"
+            st.query_params.update({"user": t_user, "role": "team"})
+            st.success(f"Welcome, {t_user}! Redirecting to your console...")
+            st.rerun()
+        else:
+            st.error("Invalid team login (check username and password).")
+
+    st.divider()
+
+    # ---- ADMIN LOGIN (Smaller Expander) ----
+    with st.expander("🔐 Admin Login (Restricted Access)"):
+        a_user = st.text_input("Admin Username", key="admin_user")
+        a_pw = st.text_input("Admin Password", type="password", key="admin_pw")
+        if st.button("Login as Admin", key="admin_login_btn"):
             if a_user == data["admin"]["username"] and a_pw == data["admin"]["password"]:
                 st.session_state.user = a_user
                 st.session_state.role = "admin"
                 st.query_params.update({"user": a_user, "role": "admin"})
+                st.success("Admin access granted.")
                 st.rerun()
             else:
                 st.error("Invalid admin credentials.")
 
-    with col2:
-        st.subheader("Team Login")
-        t_user = st.text_input("Team username (exact)", key="t_user")
-        t_pw = st.text_input("Team password", type="password", key="t_pw")
-        if st.button("Login as Team"):
-            teams = data["teams"]
-            if t_user in teams and t_pw == teams[t_user]["password"]:
-                st.session_state.user = t_user
-                st.session_state.role = "team"
-                st.query_params.update({"user": t_user, "role": "team"})
-                st.rerun()
-            else:
-                st.error("Invalid team login (check username & password).")
+    # ---- FOOTER ----
+    st.markdown(
+        """
+        <hr style='margin-top: 40px; margin-bottom: 10px;'>
+        <div style='text-align: center; color: gray; font-size: 0.9em;'>
+            IEEE SPS BNMIT
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
 
 # ---------------- Logout ----------------
 def logout_ui():
@@ -188,16 +215,29 @@ def admin_ui():
     team_choice = st.selectbox("Winning Team", options=list(teams.keys()))
     if st.button("Assign Item to Team (Deduct Credits)"):
         total_cost = int(bid_price) * int(qty)
-        if teams[team_choice]["credits"] < total_cost:
-            st.error(f"Not enough credits. {team_choice} has {teams[team_choice]['credits']} credits.")
+        current_credits = teams[team_choice]["credits"]
+        starting_credits = data.get("starting_credits", 1000)
+
+    # Calculate new remaining credits and total spent
+        new_remaining = current_credits - total_cost
+        total_spent = starting_credits - new_remaining
+
+        if total_cost > current_credits:
+            st.error(f"❌ {team_choice} doesn’t have enough credits. They only have {current_credits} left.")
+        elif total_spent > starting_credits:
+            st.error(f"⚠️ {team_choice} would exceed the {starting_credits}-credit limit. Cannot assign this item.")
         else:
-            teams[team_choice]["credits"] -= total_cost
-            teams[team_choice]["items"].append({"name": item_name, "price": int(bid_price), "qty": int(qty)})
+            teams[team_choice]["credits"] = new_remaining
+            teams[team_choice]["items"].append({
+                "name": item_name,
+                "price": int(bid_price),
+                "qty": int(qty)
+            })
             data["log"].append(
                 f"{datetime.now().isoformat(timespec='seconds')} — {team_choice} won {qty} × {item_name} @ {bid_price} (spent {total_cost})"
             )
             save_data(data)
-            st.success(f"Awarded {qty} × {item_name} to {team_choice}. Remaining credits: {teams[team_choice]['credits']}")
+            st.success(f"Awarded {qty} × {item_name} to {team_choice}. Remaining credits: {new_remaining}")
 
     st.divider()
 
@@ -212,6 +252,20 @@ def admin_ui():
     st.write("Recent activity:")
     for line in data["log"][-20:]:
         st.code(line)
+    
+    # ---------------- Reset Entire JSON ----------------
+    st.divider()
+    st.markdown("### ⚠️ Clear / Reset Entire Data File")
+    st.warning("This will clear **all team items, restore full credits**, and delete the event log. Use with caution.")
+
+    if st.button("🧹 Reset All Teams & Logs"):
+        for name, info in teams.items():
+            info["credits"] = data["starting_credits"]
+            info["items"] = []
+        data["log"] = []
+        save_data(data)
+        st.success("✅ All team data and logs have been cleared successfully!")
+        st.rerun()
 
 # ---------------- Team UI ----------------
 def team_ui():
