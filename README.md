@@ -136,44 +136,43 @@ Manual spreadsheets fail. Paper logs get messy. Teams get confused about what th
 
 ---
 
-## 📸 Screenshots
-
 <div align="center">
 
-### Login Interface
+### Login Interface  
 *Secure role-based authentication for teams and administrators*
 
-![Login Page](Screenshots/Login%20Page.png)
+![Login Page](Screenshots/Login_Page.png)
 
 ---
 
-### Team Dashboard
+### Team Dashboard  
 *Real-time view of credits and won components with auto-refresh*
 
-![Team Dashboard](Screenshots/Team%20Dashboard.png)
+![Team Dashboard](Screenshots/Team_Dashboard.png)
 
 ---
 
-### Admin Dashboard - Team Management
+### Admin Dashboard – Team Management  
 *View all teams, their credits, items won, and registration status at a glance*
 
-![Admin Dashboard](Screenshots/Admin-Dashboard.png)
+![Admin Dashboard](Screenshots/Admin_Dashboard.png)
 
 ---
 
-### Admin Dashboard - Record Auction Results
+### Admin Dashboard – Record Auction Results  
 *Quickly assign components to winning teams with automatic credit deduction*
 
-![Record Auction](Screenshots/Admin%20Record%20Auction.png)
+![Record Auction](Screenshots/Admin_Record_Auction.png)
 
 ---
 
-### Auction Activity Log
+### Auction Activity Log  
 *Complete timestamped history of all auction transactions and credit usage*
 
-![Activity Log](Screenshots/Admin%20Export%20Logs.png)
+![Activity Log](Screenshots/Admin_Export_Logs.png)
 
 </div>
+
 ---
 
 ## ⚠️ Known Limitations
