@@ -8,7 +8,15 @@ A real-time auction management platform built for IEEE events where teams compet
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 
 ---
-**[🚀 Live Demo] (https://bid2build.streamlit.app/)** 
+</div>
+<div align="center">
+
+**🚀 Live Demo**  
+https://drive.google.com/drive/folders/1SB8NMxIlMlNpMiPQn5TPIIZOGed_LFc0?usp=sharing  
+
+**🌐 Deployed Website**  
+https://bid2build.streamlit.app/
+
 </div>
 
 ## 🎯 What is Bid2Build?
