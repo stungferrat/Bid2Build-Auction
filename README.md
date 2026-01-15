@@ -190,7 +190,6 @@ This platform was built for **real-world simplicity**, not feature completeness:
 These were intentional design choices for event reliability.
 
 ---
-
 ## 📈 Real-World Impact
 
 **Used at IEEE Signal Processing Society Event**
