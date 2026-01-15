@@ -8,7 +8,7 @@ A real-time auction management platform built for IEEE events where teams compet
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 
 ---
-
+**[🚀 Live Demo] (https://bid2build.streamlit.app/)** 
 </div>
 
 ## 🎯 What is Bid2Build?
@@ -132,57 +132,40 @@ Manual spreadsheets fail. Paper logs get messy. Teams get confused about what th
 
 <div align="center">
 
-### Admin Dashboard
-*Manage teams, credits, and auction results*
+### Login Interface
+*Secure role-based authentication for teams and administrators*
 
-![Admin Dashboard Placeholder](https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=Admin+Dashboard)
-
-### Team Dashboard
-*Track your credits and components*
-
-![Team Dashboard Placeholder](https://via.placeholder.com/800x400/7ED321/FFFFFF?text=Team+Dashboard)
-
-</div>
+![Login Page](Screenshots/Login%20Page.png)
 
 ---
 
-## 🚀 Quick Start
+### Team Dashboard
+*Real-time view of credits and won components with auto-refresh*
 
-### Prerequisites
-```bash
-Python 3.8+
-pip
-```
+![Team Dashboard](Screenshots/Team%20Dashboard.png)
 
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/bid2build.git
-cd bid2build
+---
 
-# Install dependencies
-pip install -r requirements.txt
+### Admin Dashboard - Team Management
+*View all teams, their credits, items won, and registration status at a glance*
 
-# Run the application
-streamlit run app.py
-```
+![Admin Dashboard](Screenshots/Admin-Dashboard.png)
 
-### Configuration
+---
 
-Edit `config.json` to set up your event:
-```json
-{
-  "teams": [
-    {"name": "Team Alpha", "credits": 1000},
-    {"name": "Team Beta", "credits": 1000}
-  ],
-  "components": [
-    {"name": "Raspberry Pi 4", "min_bid": 300},
-    {"name": "Arduino Uno", "min_bid": 150}
-  ]
-}
-```
+### Admin Dashboard - Record Auction Results
+*Quickly assign components to winning teams with automatic credit deduction*
 
+![Record Auction](Screenshots/Admin%20Record%20Auction.png)
+
+---
+
+### Auction Activity Log
+*Complete timestamped history of all auction transactions and credit usage*
+
+![Activity Log](Screenshots/Admin%20Export%20Logs.png)
+
+</div>
 ---
 
 ## ⚠️ Known Limitations
@@ -196,68 +179,22 @@ This platform was built for **real-world simplicity**, not feature completeness:
 | **Designed for small/medium events** | Prioritizes reliability over scale |
 | **No automated bidding** | Organizers control the pace |
 
-These aren't bugs—they're intentional design choices for event reliability.
+These were intentional design choices for event reliability.
 
 ---
 
 ## 📈 Real-World Impact
 
-**Used at IEEE SPS Technical Event**
-- ✅ Managed 8 teams across 3-hour auction
+**Used at IEEE Signal Processing Society Event**
+- ✅ Managed 8 teams across 2-hour auction
 - ✅ Zero tracking errors
 - ✅ Instant credit updates
 - ✅ Complete audit trail exported to Excel
 - ✅ Reduced organizer stress significantly
 
-> *"This platform turned chaos into clarity. We could focus on running the event instead of tracking spreadsheets."*  
-> — Event Organizer, IEEE SPS
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📋 Roadmap
-
-- [ ] Add multi-event support
-- [ ] Implement SQLite backend option
-- [ ] Create mobile-responsive design
-- [ ] Add real-time notifications
-- [ ] Support component trading between teams
-- [ ] Generate automatic event reports
-
----
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-## 🙏 Acknowledgments
-
-- Built for **IEEE Student Branch** events
-- Inspired by real problems in technical event organization
-- Tested and refined during live competitions
-- Special thanks to all organizers who provided feedback
-
----
-
-<div align="center">
-
-### Built with ❤️ for the maker community
-
-**[⭐ Star this repo](/)** if you find it useful!
-
-Made by [Your Name](https://github.com/yourusername) | [IEEE Member](https://ieee.org)
+Made by Harsha M S (https://github.com/stungferrat) | [IEEE SPS Office Bearer](https://ieee.org)
 
 </div>
