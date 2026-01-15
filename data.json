@@ -26,58 +26,425 @@
     },
     "innovators": {
       "password": "jkabhinav",
-      "credits": 1000,
-      "items": [],
+      "credits": 125,
+      "items": [
+        {
+          "name": "ESP32",
+          "price": 420,
+          "qty": 1
+        },
+        {
+          "name": "MQ135",
+          "price": 75,
+          "qty": 1
+        },
+        {
+          "name": "Ultrasonic Sensor",
+          "price": 70,
+          "qty": 1
+        },
+        {
+          "name": "MAX30102",
+          "price": 90,
+          "qty": 1
+        },
+        {
+          "name": "DC Motor and driver",
+          "price": 80,
+          "qty": 1
+        },
+        {
+          "name": "Servo Motor ",
+          "price": 140,
+          "qty": 1
+        }
+      ],
       "registered": true
     },
     "sas": {
       "password": "smruthiarunkumar",
-      "credits": 1000,
-      "items": [],
+      "credits": 60,
+      "items": [
+        {
+          "name": "ESP32",
+          "price": 350,
+          "qty": 1
+        },
+        {
+          "name": "DHT11",
+          "price": 90,
+          "qty": 1
+        },
+        {
+          "name": "MPU6050",
+          "price": 80,
+          "qty": 1
+        },
+        {
+          "name": "ECG Sensor Module",
+          "price": 150,
+          "qty": 1
+        },
+        {
+          "name": "MAX30102",
+          "price": 180,
+          "qty": 1
+        },
+        {
+          "name": "RFID Tags and reader",
+          "price": 90,
+          "qty": 1
+        }
+      ],
       "registered": true
     },
     "abhiyantri": {
       "password": "ronaksoni",
-      "credits": 1000,
-      "items": [],
+      "credits": 125,
+      "items": [
+        {
+          "name": "Raspberry Pi 4",
+          "price": 400,
+          "qty": 1
+        },
+        {
+          "name": "BMP280",
+          "price": 55,
+          "qty": 1
+        },
+        {
+          "name": "MPU6050",
+          "price": 90,
+          "qty": 1
+        },
+        {
+          "name": "RPI Camera Module",
+          "price": 200,
+          "qty": 1
+        },
+        {
+          "name": "Lithium Ion Battery",
+          "price": 130,
+          "qty": 1
+        }
+      ],
       "registered": true
     },
     "jarvis": {
       "password": "chinmayig",
-      "credits": 1000,
-      "items": [],
+      "credits": 100,
+      "items": [
+        {
+          "name": "Arduino Uno",
+          "price": 300,
+          "qty": 1
+        },
+        {
+          "name": "MQ135",
+          "price": 55,
+          "qty": 1
+        },
+        {
+          "name": "PIR Motion Sensor",
+          "price": 65,
+          "qty": 1
+        },
+        {
+          "name": "LCD ",
+          "price": 105,
+          "qty": 1
+        },
+        {
+          "name": "LCD ",
+          "price": 105,
+          "qty": 1
+        },
+        {
+          "name": "Relay Module",
+          "price": 270,
+          "qty": 1
+        }
+      ],
       "registered": true
     },
     "ideasphere": {
       "password": "adhyaprashanth",
-      "credits": 1000,
-      "items": [],
+      "credits": 25,
+      "items": [
+        {
+          "name": "Raspberry Pi 4",
+          "price": 320,
+          "qty": 1
+        },
+        {
+          "name": "BMP280",
+          "price": 55,
+          "qty": 1
+        },
+        {
+          "name": "IR Sensor",
+          "price": 40,
+          "qty": 1
+        },
+        {
+          "name": "Camera module for rpi",
+          "price": 120,
+          "qty": 1
+        },
+        {
+          "name": "Stepper Motor and driver",
+          "price": 70,
+          "qty": 1
+        },
+        {
+          "name": "Relay Module",
+          "price": 180,
+          "qty": 1
+        },
+        {
+          "name": "Lithium Ion battery",
+          "price": 190,
+          "qty": 1
+        }
+      ],
       "registered": true
     },
     "team_circuits": {
       "password": "kanishka",
-      "credits": 1000,
-      "items": [],
+      "credits": 85,
+      "items": [
+        {
+          "name": "Arduino Uno",
+          "price": 280,
+          "qty": 1
+        },
+        {
+          "name": "MQ135",
+          "price": 95,
+          "qty": 1
+        },
+        {
+          "name": "MAX30102",
+          "price": 180,
+          "qty": 1
+        },
+        {
+          "name": "RFID Tags + Reader",
+          "price": 110,
+          "qty": 1
+        },
+        {
+          "name": "Relay Module",
+          "price": 250,
+          "qty": 1
+        }
+      ],
       "registered": true
     },
     "washi_o_washi": {
       "password": "ksrinivasyashwanth",
-      "credits": 1000,
-      "items": [],
+      "credits": 500,
+      "items": [
+        {
+          "name": "Raspberry pi 4",
+          "price": 260,
+          "qty": 1
+        },
+        {
+          "name": "Rain Sensor Module",
+          "price": 75,
+          "qty": 1
+        },
+        {
+          "name": "PIR motion Sensor",
+          "price": 85,
+          "qty": 1
+        },
+        {
+          "name": "Servo Motor",
+          "price": 80,
+          "qty": 1
+        }
+      ],
       "registered": true
     },
     "comet": {
       "password": "gaganm",
-      "credits": 1000,
-      "items": [],
+      "credits": 230,
+      "items": [
+        {
+          "name": "ESP32",
+          "price": 400,
+          "qty": 1
+        },
+        {
+          "name": "DHT11",
+          "price": 70,
+          "qty": 1
+        },
+        {
+          "name": "BMP280",
+          "price": 65,
+          "qty": 1
+        },
+        {
+          "name": "RFID Tags and reader",
+          "price": 160,
+          "qty": 1
+        },
+        {
+          "name": "LCD ",
+          "price": 75,
+          "qty": 1
+        }
+      ],
       "registered": true
     },
     "protoz": {
       "password": "rajathdk",
-      "credits": 1000,
-      "items": [],
+      "credits": 45,
+      "items": [
+        {
+          "name": "Arduino Uno",
+          "price": 300,
+          "qty": 1
+        },
+        {
+          "name": "Soil Moisture Sensor",
+          "price": 65,
+          "qty": 1
+        },
+        {
+          "name": "Rain Sensor Module",
+          "price": 55,
+          "qty": 1
+        },
+        {
+          "name": "DHT11",
+          "price": 40,
+          "qty": 1
+        },
+        {
+          "name": "IR SENSOR",
+          "price": 50,
+          "qty": 1
+        },
+        {
+          "name": "LCD ",
+          "price": 95,
+          "qty": 1
+        },
+        {
+          "name": "Stepper Motor + driver",
+          "price": 70,
+          "qty": 1
+        },
+        {
+          "name": "Lithium Ion Battery",
+          "price": 280,
+          "qty": 1
+        }
+      ],
+      "registered": true
+    },
+    "sks": {
+      "password": "karan",
+      "credits": 245,
+      "items": [
+        {
+          "name": "ESP32",
+          "price": 210,
+          "qty": 1
+        },
+        {
+          "name": "Rain Sensor",
+          "price": 45,
+          "qty": 1
+        },
+        {
+          "name": "Ultrasonic Sensor",
+          "price": 70,
+          "qty": 1
+        },
+        {
+          "name": "RFID Tags and reader",
+          "price": 160,
+          "qty": 1
+        },
+        {
+          "name": "Relay Module",
+          "price": 160,
+          "qty": 1
+        },
+        {
+          "name": "Servo Motor",
+          "price": 110,
+          "qty": 1
+        }
+      ],
       "registered": true
     }
   },
-  "log": []
+  "log": [
+    "2025-10-17T05:38:23 \u2014 team_circuits won 1 \u00d7 Arduino Uno @ 280 (spent 280)",
+    "2025-10-17T05:40:08 \u2014 innovators won 1 \u00d7 ESP32 @ 420 (spent 420)",
+    "2025-10-17T05:40:50 \u2014 abhiyantri won 1 \u00d7 Raspberry Pi 4 @ 400 (spent 400)",
+    "2025-10-17T05:41:59 \u2014 protoz won 1 \u00d7 Arduino Uno @ 300 (spent 300)",
+    "2025-10-17T05:43:28 \u2014 comet won 1 \u00d7 ESP32 @ 400 (spent 400)",
+    "2025-10-17T05:43:50 \u2014 ideasphere won 1 \u00d7 Raspberry Pi 4 @ 320 (spent 320)",
+    "2025-10-17T05:44:44 \u2014 jarvis won 1 \u00d7 Arduino Uno @ 300 (spent 300)",
+    "2025-10-17T05:48:54 \u2014 sas won 1 \u00d7 ESP32 @ 350 (spent 350)",
+    "2025-10-17T05:49:33 \u2014 washi_o_washi won 1 \u00d7 Raspberry pi 4 @ 260 (spent 260)",
+    "2025-10-17T05:50:39 \u2014 sks won 1 \u00d7 ESP32 @ 210 (spent 210)",
+    "2025-10-17T05:51:43 \u2014 sas won 1 \u00d7 DHT11 @ 90 (spent 90)",
+    "2025-10-17T05:52:36 \u2014 abhiyantri won 1 \u00d7 BMP280 @ 55 (spent 55)",
+    "2025-10-17T05:53:25 \u2014 team_circuits won 1 \u00d7 MQ135 @ 95 (spent 95)",
+    "2025-10-17T05:54:04 \u2014 protoz won 1 \u00d7 Soil Moisture Sensor @ 65 (spent 65)",
+    "2025-10-17T05:54:28 \u2014 washi_o_washi won 1 \u00d7 Rain Sensor Module @ 75 (spent 75)",
+    "2025-10-17T05:55:23 \u2014 comet won 1 \u00d7 DHT11 @ 70 (spent 70)",
+    "2025-10-17T05:55:46 \u2014 comet won 1 \u00d7 BMP280 @ 65 (spent 65)",
+    "2025-10-17T05:56:20 \u2014 innovators won 1 \u00d7 MQ135 @ 75 (spent 75)",
+    "2025-10-17T05:56:58 \u2014 protoz won 1 \u00d7 Rain Sensor Module @ 55 (spent 55)",
+    "2025-10-17T06:00:53 \u2014 protoz won 1 \u00d7 DHT11 @ 40 (spent 40)",
+    "2025-10-17T06:01:08 \u2014 ideasphere won 1 \u00d7 BMP280 @ 55 (spent 55)",
+    "2025-10-17T06:01:37 \u2014 jarvis won 1 \u00d7 MQ135 @ 55 (spent 55)",
+    "2025-10-17T06:01:57 \u2014 sks won 1 \u00d7 Rain Sensor @ 45 (spent 45)",
+    "2025-10-17T06:02:38 \u2014 abhiyantri won 1 \u00d7 MPU6050 @ 90 (spent 90)",
+    "2025-10-17T06:03:10 \u2014 jarvis won 1 \u00d7 PIR Motion Sensor @ 65 (spent 65)",
+    "2025-10-17T06:03:33 \u2014 innovators won 1 \u00d7 Ultrasonic Sensor @ 70 (spent 70)",
+    "2025-10-17T06:04:16 \u2014 protoz won 1 \u00d7 IR SENSOR @ 50 (spent 50)",
+    "2025-10-17T06:05:02 \u2014 sas won 1 \u00d7 MPU6050 @ 80 (spent 80)",
+    "2025-10-17T06:05:41 \u2014 washi_o_washi won 1 \u00d7 PIR motion Sensor @ 85 (spent 85)",
+    "2025-10-17T06:06:12 \u2014 sks won 1 \u00d7 Ultrasonic Sensor @ 70 (spent 70)",
+    "2025-10-17T06:06:48 \u2014 ideasphere won 1 \u00d7 IR Sensor @ 70 (spent 70)",
+    "2025-10-17T06:07:35 \u2014 team_circuits won 1 \u00d7 MAX30102 @ 180 (spent 180)",
+    "2025-10-17T06:07:53 \u2014 ideasphere won 1 \u00d7 IR Sensor @ 40 (spent 40)",
+    "2025-10-17T06:08:42 \u2014 sas won 1 \u00d7 ECG Sensor Module @ 150 (spent 150)",
+    "2025-10-17T06:09:06 \u2014 sas won 1 \u00d7 MAX30102 @ 180 (spent 180)",
+    "2025-10-17T06:09:32 \u2014 innovators won 1 \u00d7 MAX30102 @ 90 (spent 90)",
+    "2025-10-17T06:10:11 \u2014 team_circuits won 1 \u00d7 RFID Tags + Reader @ 110 (spent 110)",
+    "2025-10-17T06:10:51 \u2014 abhiyantri won 1 \u00d7 RPI Camera Module @ 200 (spent 200)",
+    "2025-10-17T06:11:40 \u2014 sks won 1 \u00d7 RFID Tags and reader @ 160 (spent 160)",
+    "2025-10-17T06:12:19 \u2014 ideasphere won 1 \u00d7 Camera module for rpi @ 120 (spent 120)",
+    "2025-10-17T06:13:13 \u2014 comet won 1 \u00d7 RFID Tags and reader @ 160 (spent 160)",
+    "2025-10-17T06:13:31 \u2014 sas won 1 \u00d7 RFID Tags and reader @ 90 (spent 90)",
+    "2025-10-17T06:14:56 \u2014 comet won 1 \u00d7 Relay Module @ 75 (spent 75)",
+    "2025-10-17T06:16:19 \u2014 comet won 1 \u00d7 LCD  @ 75 (spent 75)",
+    "2025-10-17T06:16:33 \u2014 jarvis won 1 \u00d7 LCD  @ 105 (spent 105)",
+    "2025-10-17T06:16:33 \u2014 jarvis won 1 \u00d7 LCD  @ 105 (spent 105)",
+    "2025-10-17T06:16:56 \u2014 protoz won 1 \u00d7 LCD  @ 95 (spent 95)",
+    "2025-10-17T06:17:40 \u2014 sks won 1 \u00d7 Relay Module @ 160 (spent 160)",
+    "2025-10-17T06:18:16 \u2014 innovators won 1 \u00d7 DC Motor and driver @ 80 (spent 80)",
+    "2025-10-17T06:18:40 \u2014 ideasphere won 1 \u00d7 Stepper Motor and driver @ 70 (spent 70)",
+    "2025-10-17T06:19:03 \u2014 abhiyantri won 1 \u00d7 Lithium Ion Battery @ 130 (spent 130)",
+    "2025-10-17T06:19:56 \u2014 innovators won 1 \u00d7 Servo Motor  @ 140 (spent 140)",
+    "2025-10-17T06:21:13 \u2014 ideasphere won 1 \u00d7 Relay Module @ 180 (spent 180)",
+    "2025-10-17T06:21:55 \u2014 protoz won 1 \u00d7 Stepper Motor + driver @ 70 (spent 70)",
+    "2025-10-17T06:22:30 \u2014 ideasphere won 1 \u00d7 Lithium Ion battery @ 190 (spent 190)",
+    "2025-10-17T06:23:17 \u2014 sks won 1 \u00d7 Servo Motor @ 110 (spent 110)",
+    "2025-10-17T06:24:05 \u2014 jarvis won 1 \u00d7 Relay Module @ 270 (spent 270)",
+    "2025-10-17T06:25:09 \u2014 protoz won 1 \u00d7 Lithium Ion Battery @ 280 (spent 280)",
+    "2025-10-17T06:27:08 \u2014 washi_o_washi won 1 \u00d7 Servo Motor @ 80 (spent 80)",
+    "2025-10-17T06:28:06 \u2014 team_circuits won 1 \u00d7 Relay Module @ 250 (spent 250)"
+  ]
 }
