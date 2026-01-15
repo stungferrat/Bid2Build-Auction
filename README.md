@@ -16,7 +16,11 @@ https://drive.google.com/drive/folders/1SB8NMxIlMlNpMiPQn5TPIIZOGed_LFc0?usp=sha
 
 **🌐 Deployed Website**  
 https://bid2build.streamlit.app/
-
+Admin Username: admin 
+Admin Password: bidsps2025 
+Team Username: abhiyantri
+Teamp Password: ronaksoni
+This is for login for admin and team dashboard for viewing the website
 </div>
 
 ## 🎯 What is Bid2Build?
